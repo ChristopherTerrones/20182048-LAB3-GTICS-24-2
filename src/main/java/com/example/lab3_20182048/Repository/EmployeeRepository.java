@@ -11,8 +11,8 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     @Transactional
     @Modifying
-    @Query(value = "insert into employees(first_name,last_name,job_id) values(?1,?2,?3)",nativeQuery = true)
-    void agregarEmpleado(String nombre,String apellido,String idJob);
+    @Query(value = "insert into employees(first_name,last_name,email,password,job_id,salary,manager_id,department_id) values(?1,?2,?3,?4,?5,?6,?7,?8)",nativeQuery = true)
+    void agregarEmpleado(String nombre,String apellido,String correo,String contrasena,String idJob,Double salario,Integer idManager,Integer idDepartment);
 
     @Transactional
     @Modifying
