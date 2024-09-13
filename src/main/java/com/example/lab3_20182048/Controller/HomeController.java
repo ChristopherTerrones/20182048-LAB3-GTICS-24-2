@@ -69,7 +69,7 @@ public class HomeController {
                                           @RequestParam("sueldo")Double sueldo,
                                           @RequestParam("idJefe")Integer idJefe,
                                           @RequestParam("idDepartamento")Integer idDepartamento){
-        employeeRepository.agregarEmpleado(nombre,apellido,email,contrasena,idPuesto,sueldo,idJefe,idDepartamento);
+        employeeRepository.agregarEmpleado(nombre,apellido,idPuesto);
         return "redirect:/empleados";
     }
 
